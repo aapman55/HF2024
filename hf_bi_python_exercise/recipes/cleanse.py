@@ -24,3 +24,19 @@ def extract_time_in_minutes(df: DataFrame, time_col: str, output_col: str) -> Da
     )
 
     return df
+
+
+def categorise_difficulty(
+    df: DataFrame, cook_column: str, prep_column: str
+) -> DataFrame:
+    return df.withColumn(
+        "difficulty",
+        F.expr(
+            f"""
+            CASE WHEN {cook_column} + {prep_column} > 60 THEN 'HARD'
+                WHEN {cook_column} + {prep_column} >= 30 THEN 'MEDIUM'
+                WHEN {cook_column} + {prep_column} > 0 THEN 'EASY'
+                ELSE 'UNKNOWN' END
+            """
+        ),
+    )
