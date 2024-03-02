@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "hf2024"
+version = "0.0.0"
+description = "Hello Fresh assignment"
+authors = ["Zhi-Li Liu"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+pyspark = "^3.5.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2.0"
+pytest = "^8.0.2"
+pylint = "^3.1.0"
+mypy = "^1.8.0"
+chispa = "^0.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
