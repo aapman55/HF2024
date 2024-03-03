@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     #  Download file
     file_url = "https://bnlf-tests.s3.eu-central-1.amazonaws.com/recipes.json"
-    download_json_data(file_url, file_path)
+    download_json_data(url=file_url, download_file_path=file_path)
 
     # Read file
     df_raw = spark.read.json(file_path)
