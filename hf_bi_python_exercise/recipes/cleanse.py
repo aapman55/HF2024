@@ -40,3 +40,7 @@ def categorise_difficulty(
             """
         ),
     )
+
+
+def escape_newlines(df: DataFrame, col: str) -> DataFrame:
+    return df.withColumn(col, F.regexp_replace(F.col(col), r"\n", r"\\n"))
