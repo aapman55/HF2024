@@ -40,4 +40,4 @@ If you are running windows there are a few things you might need to do:
     `Manage app execution aliases`
 4. Pyspark expects the python executable to be called `python3.exe`. Check
    whether this is the case. If not, you can copy the normal `python.exe` and
-   name it `python3.exe``.
+   name it `python3.exe`.
