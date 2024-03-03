@@ -25,6 +25,12 @@ You can just run:
 python ./hf_bi_python_exercise/main.py
 ```
 
+## Running unit tests
+You can run the unit tests by:
+```commandline
+pytest ./tests
+```
+
 ## Possible issues with spark on Windows
 If you are running windows there are a few things you might need to do:
 1. Download Hadoop binaries from https://github.com/cdarlint/winutils
