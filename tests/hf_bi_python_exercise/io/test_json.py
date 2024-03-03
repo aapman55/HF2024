@@ -26,6 +26,6 @@ class TestJson(unittest.TestCase):
 
         download_json_data(url="dummy_url", download_file_path="dummy_path")
 
-        mock_requests.get.assert_called_with("dummy_url")
+        mock_requests.get.assert_called_with("dummy_url", timeout=3600)
         mock_path.assert_called_with("dummy_path")
         mock_path.return_value.write_text.assert_called_with("{}")
